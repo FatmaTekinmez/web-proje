@@ -19,7 +19,7 @@
     font-size: 150px;
     text-align: center;
     margin-top: 8%;
-    color:white;
+    color: white;
     font-weight: bold;
     font-family: serif;
 }
@@ -66,6 +66,16 @@
     font-size: 20px;
 }
 
+.yazilar3 {
+    color: white;
+    font-family: serif;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: 20px;
+}
+
 .div1 {
     position: relative;
     border: 3px solid white;
@@ -99,6 +109,7 @@
     float: left;
     display: inline-block;
 }
+
 .div2::before {
     content: '';
     position: absolute;
@@ -120,7 +131,8 @@
     float: left;
     display: inline-block;
 }
- .resimDiv2 {
+
+.resimDiv2 {
     border: 5px solid white;
     width: 43%;
     margin-top: 3%;
@@ -128,8 +140,9 @@
     margin-right: 2%;
     float: left;
     display: inline-block;
-} 
-.resimDiv3{
+}
+
+.resimDiv3 {
     border: 5px solid white;
     width: 41%;
     margin-top: 3%;
@@ -162,6 +175,7 @@
     width: 8%;
     height: 100%;
 }
+
 .resimYaniYazi {
     font-weight: bold;
     color: gray;
@@ -171,13 +185,15 @@
     padding-left: 8%;
     padding-right: 2%;
 }
+
 .resim {
     float: left;
     width: 92%;
     height: 100%;
     display: inline-block;
 }
-.resim2{
+
+.resim2 {
     padding-top: 0%;
     padding-left: 0%;
     text-align: center;
@@ -206,12 +222,25 @@
     opacity: 0.5;
     z-index: -1;
 }
-.girisDivi2, h1{
-padding-top: 3%;
-padding-left: 2%;
-font-family: serif;
-color:white;
+
+.girisDivi2,
+h1 {
+    padding-top: 3%;
+    padding-left: 2%;
+    font-family: serif;
+    color: white;
 }
+
+.baslik {
+    padding-top: 4%;
+    padding-left: 4%;
+    padding-bottom: 1%;
+    font-weight: bold;
+    font-family: serif;
+    color: rgb(218, 20, 122);
+
+}
+
 .girisDivi3 {
     position: relative;
     border: 3px solid white;
@@ -230,4 +259,79 @@ color:white;
     background-image: url(siyah.jpg);
     opacity: 0.5;
     z-index: -1;
+}
+
+/* mirasımız css */
+.resimDiv4 {
+    margin-top: 15%;
+}
+
+.maviDiv {
+    position: relative;
+    border: 3px solid white;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 4%;
+}
+
+.maviDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(siyah.jpg);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* özgeçmiş css */
+header h1 {
+    font-family: serif;
+    padding-left: 10%;
+    padding-top: 9%;
+    font-weight: bold;
+}
+
+header p {
+    color: rgb(237, 182, 210);
+    font-family: serif;
+    padding-left: 10%;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+}
+section h2 {
+    font-family: serif;
+    padding-left: 10%;
+    font-weight: bold;
+    color: white;
+}
+article h3 {
+    font-family: serif;
+    padding-left: 10%;
+    font-size: 23px;
+    color: rgb(237, 182, 210);
+}
+article p{
+    font-size:16px;
+    font-family: serif;
+    padding-left: 10%;
+    color: white;
+}
+section li{
+    color: white;
+    font-family: serif;
+    padding-left: 10%;
+
+
+
+
 }
