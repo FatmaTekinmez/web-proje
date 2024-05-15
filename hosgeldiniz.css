@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+.hosgeldiniz {
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 1%;
+    padding-left: 7%;
+    padding-right: 4%;
+    display: inline-block;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hosgeldinizDiv {
+    margin-left: 4%;
+    margin-right: 3%;
+    position: relative;
+    border: 3px solid white;
+    display: inline-block;
+}
+
+.hosgeldinizDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(mor.jpg);
+    opacity: 0.6;
+    z-index: -1;
+}
+.yazi{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 1%;
+    margin-bottom: 10%;
+    padding-left: 37%;
+    padding-right: 4%;
+}
+ .hosgeldinizDiv a:hover{
+    color: rgb(204, 184, 222);
+    text-decoration: none;
+
+}
