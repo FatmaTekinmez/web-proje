@@ -1,10 +1,9 @@
 /* Arka plan resmi */
 
-*{
+* {
     font-family: serif;
-
-
 }
+
 .backgroundDiv {
     position: fixed;
     top: 0%;
@@ -49,7 +48,7 @@
     background-image: url(beyaz.jpg);
     opacity: 0.6;
     z-index: -1;
-    
+
 }
 
 /* Yazılar */
@@ -316,40 +315,45 @@ hr {
     width: 80%;
     margin-left: 10%;
 }
+
 section h2 {
     font-family: serif;
     padding-left: 10%;
     font-weight: bold;
     color: white;
 }
+
 article h3 {
     font-family: serif;
     padding-left: 10%;
     font-size: 23px;
     color: rgb(237, 182, 210);
 }
-article p{
-    font-size:16px;
+
+article p {
+    font-size: 16px;
     font-family: serif;
     padding-left: 10%;
     color: white;
 }
-section li{
+
+section li {
     color: white;
     font-family: serif;
     padding-left: 10%;
 }
-section ul{
+
+section ul {
     list-style-position: inside;
 }
-footer h2{
+
+footer h2 {
     font-family: serif;
     padding-left: 10%;
     font-weight: bold;
-    color:rgb(237, 182, 210);
-}
-li em{
-    color:rgb(237, 182, 210) ;
+    color: rgb(237, 182, 210);
 }
 
-
+li em {
+    color: rgb(237, 182, 210);
+}

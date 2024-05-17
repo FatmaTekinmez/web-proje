@@ -1,0 +1,112 @@
+#data-container {
+    margin-left: 5%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.character {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    width: 150px;
+    font-size: 20px;
+    color: #6f1a6a;
+    text-align: center;
+}
+
+.character img {
+    max-width: 100%;
+    height: auto;
+}
+.baslik {
+    font-size: 80px;
+    text-align: left;
+    margin-top: 3%;
+    margin-left: 3%;
+    color: white;
+    font-weight: bold;
+    font-family: serif;
+}
+.yazi {
+    color: black;
+    font-family: serif;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 7%;
+    padding-bottom: 4%;
+    font-size: 20px;
+}
+.siirDivi2 {
+    position: relative;
+    margin-top: 8%;
+    margin-left: 2%;
+    margin-right: 3%;
+    width: 100%;
+}
+
+ .siirDivi2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(mor.jpg);
+    opacity: 0.5;
+    z-index: -1;
+} 
+#siirBaslik{
+    color: rgb(78, 27, 123);
+    font-size: 25px;
+    font-weight: bold;
+}
+.siir {
+    color: white;
+    font-family: serif;
+    padding-left: 4%;
+    padding-right: 3%;
+    padding-top: 8%;
+    padding-bottom: 4%;
+    font-size: 20px;
+}
+.siyahDiv {
+    position: relative;
+    border: 3px solid white;
+    margin-left: 4%;
+    margin-right: 2%;
+    margin-top: 4%;
+}
+
+.siyahDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(siyah.jpg);
+    opacity: 0.7;
+    z-index: -1;
+}
+.morDiv {
+    position: relative;
+    border: 3px solid white;
+    margin-left: 4%;
+    margin-right: 2%;
+    margin-top: 4%;
+}
+
+.morDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(mor.jpg);
+    opacity: 0.5;
+    z-index: -1;
+}
+
