@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anasayfa</title>
+    <title>İletişim</title>
     <link rel="stylesheet" href="cssDosyasi.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
 </head>
 
@@ -66,9 +67,10 @@
             </ul>
         </div>
     </nav>
-    <div id="app" class="container-sm">
+    <div class="container-sm">
         <div class="formDiv">
             <h1>İletişim</h1>
+            <div id="app">
             <form  @submit.prevent="validateForm" class="form">
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -129,13 +131,82 @@
                 </div>
                 <button type="button" class="btn btn-light mr-3"onclick="validateForm2()"><label>Jacascript</label> </button>
                 <button type="button" class="btn btn-light mr-3" @click="validateForm"><label>Framework</label></button>
-                <button type="submit" class="btn btn-light mr-3"><label>Temizle</label></button>
-                <button type="submit" class="btn btn-light mr-3"><label>Gönder</label></button>
+                <button type="submit" class="btn btn-light mr-3"onclick="clearForm()"><label>Temizle</label></button>
+                <button type="submit" class="btn btn-light mr-3" onclick="submitForm()"><label>Gönder</label></button>
             </form>
+            </div>
         </div>
 
-
-
-
-
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                ad: '',
+                soyad: '',
+                email: '',
+                password: '',
+                address: '',
+                city: '',
+                birthdate: '',
+                gender: '',
+                message: '',
+                isConsentGiven: false
+            },
+            methods: {
+                validateForm() {
+                    if (!this.ad) {
+                        alert('Vue:Ad alanı boş olamaz.');
+                        return false;
+                    }
+                    if (!this.soyad) {
+                        alert('Vue:Soyad alanı boş olamaz.');
+                        return false;
+                    }
+                    if (!this.email) {
+                        alert('Vue:E-mail alanı boş olamaz.');
+                        return false;
+                    }
+                    if (!this.validateEmail(this.email)) {
+                        alert('Vue:Geçerli bir e-mail adresi giriniz.');
+                        return false;
+                    }
+                    if (!this.password) {
+                        alert('Vue:Şifre alanı boş olamaz.');
+                        return false;
+                    }
+                    if (!this.address) {
+                        alert('Vue:Adres alanı boş olamaz.');
+                        return false;
+                    }
+                    if (!this.city) {
+                        alert('Vue:Şehir alanı boş olamaz.');
+                        return false;
+                    }
+                    if (!this.birthdate) {
+                        alert('Vue:Doğum tarihi alanı boş olamaz.');
+                        return false;
+                    }
+                    if (!this.gender) {
+                        alert('Vue:Cinsiyet alanı boş olamaz.');
+                        return false;
+                    }
+                    if (!this.message) {
+                        alert('Vue:Mesaj alanı boş olamaz.');
+                        return false;
+                    }
+                    if (!this.isConsentGiven) {
+                        alert('Vue:Bilgilerinizin kaydedilmesine izin vermelisiniz.');
+                        return false;
+                    }
+                    alert('Formunuz gönderilmeye hazırdır.');
+                    return true;
+                },
+                validateEmail(email) {
+                    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                    return re.test(String(email).toLowerCase());
+                }
+            }
+        });
+        </script>

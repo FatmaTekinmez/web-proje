@@ -50,6 +50,26 @@
     z-index: -1;
 
 }
+.morDiv2 {
+    position: relative;
+    border: 3px solid white;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 4%;
+}
+
+.morDiv2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(mor.jpg);
+    opacity: 0.6;
+    z-index: -1;
+
+}
 
 /* Yazılar */
 .yazilar {
@@ -112,6 +132,7 @@
     margin-left: 6%;
     margin-right: 6%;
     margin-top: 4%;
+    margin-bottom: 4%;
     float: left;
     display: inline-block;
 }
@@ -134,8 +155,6 @@
     margin-left: 0%;
     margin-right: 4%;
     margin-top: 4%;
-    float: left;
-    display: inline-block;
 }
 
 .resimDiv2 {
@@ -158,45 +177,12 @@
     display: inline-block;
 }
 
-.resimYaniDiv {
-    float: left;
-    padding-top: 12%;
-    padding-bottom: 9.3%;
-    padding-right: 0%;
-    padding-left: 1%;
-    border: 5px solid white;
-    background-color: white;
-    width: 8%;
-    height: 100%;
-}
 
-.resimYaniDiv2 {
-    float: left;
-    padding-top: 18.7%;
-    padding-bottom: 19.2%;
-    padding-right: 0%;
-    padding-left: 1%;
-    border: 5px solid white;
-    background-color: white;
-    width: 8%;
-    height: 100%;
-}
-
-.resimYaniYazi {
-    font-weight: bold;
-    color: gray;
-    display: inline-block;
-    float: left;
-    writing-mode: vertical-rl;
-    padding-left: 8%;
-    padding-right: 2%;
-}
 
 .resim {
     float: left;
-    width: 92%;
+    width: 100%;
     height: 100%;
-    display: inline-block;
 }
 
 .resim2 {
@@ -206,22 +192,6 @@
     width: 100%;
     height: 100%;
     display: inline-block;
-}
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-.card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 /*Şehrim sayfası css kısmı  */
@@ -286,6 +256,32 @@ h1 {
 /* mirasımız css */
 .resimDiv4 {
     margin-top: 15%;
+}
+.bilgiDivi {
+    position: relative;
+    border: 3px solid white;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 10%;
+}
+
+.bilgiDivi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(beyaz.jpg);
+    opacity: 0.6;
+    z-index: -1;
+
+}
+#formDataContainer{
+    padding-left: 10%;
+    padding-top: 6%;
+    padding-bottom: 5%;
+    font-size: 20px;
 }
 
 .maviDiv {
