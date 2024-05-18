@@ -1,68 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Sayfası</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="cssDosyasi.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script src="iletisim.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
-<div id="app" class="container">
-    <h1 class="mt-5">Form Sayfası</h1>
-    <form @submit.prevent="submitForm">
-        <div class="form-group">
-            <label for="name">Adınız:</label>
-            <input type="text" id="name" v-model="formData.name" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" v-model="formData.email" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Mesajınız:</label>
-            <textarea id="message" v-model="formData.message" class="form-control" required></textarea>
-        </div>
-        <button type="button" class="btn btn-secondary" @click="clearForm">Temizle</button>
-        <button type="submit" class="btn btn-primary ml-2">Gönder</button>
-    </form>
 
-    <!-- Gönderilen form bilgilerinin görüntülendiği alan -->
-    <div v-if="submitted" class="mt-4">
-        <h2>Gönderilen Form Bilgileri:</h2>
-        <p><strong>Ad:</strong> {{ formData.name }}</p>
-        <p><strong>Email:</strong> {{ formData.email }}</p>
-        <p><strong>Mesaj:</strong> {{ formData.message }}</p>
+    <!-- Sayfanın arka planı için resim -->
+    <div class="backgroundDiv"></div>
+
+    <!-- Navbar Menü (Bootsrap'tan alınıp kişilselleştirildi) -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="anasayfa.html"> <i class="fa-solid fa-heart fa-lg"
+                            style="color: palevioletred;"></i> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand text-dark" href="anasayfa.html">Anasayfa <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ozgecmıs.html">Eğitimim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="sehrim.html">Şehrim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hobiler.html">İlgi Alanlarım</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-" href="login.html">Giriş</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="iletisim.html">İletişim</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="app" class="container-sm">
+        <div class="formDiv">
+            <h1>İletişim</h1>
+            <form  @submit.prevent="validateForm" class="form">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputAd"><span>Ad</span> </label>
+                        <input type="text" class="form-control" placeholder="Adınız" id="inputAd" v-model="ad">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputSoyad"><span>Soyad</span></label>
+                        <input type="text" class="form-control" placeholder="Soyadınız" id="inputSoyad" v-model="soyad">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"><span>E-mail</span> </label>
+                        <input type="email" class="form-control" placeholder="E-mailiniz" id="inputEmail4" v-model="email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4"><span>Şifre</span></label>
+                        <input type="password" class="form-control" placeholder="Şifreniz" id="inputPassword4" v-model="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress"><span> Adres</span></label>
+                    <input type="text" class="form-control"  id="inputAddress" placeholder="Adresiniz" v-model="address">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity"><span>Şehir</span></label>
+                        <input type="text" class="form-control" placeholder="Şehriniz" id="inputCity" v-model="city">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputBirthdate"><span>Doğum Tarihi</span></label>
+                        <input type="date" class="form-control" id="inputBirthdate" v-model="birthdate">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputGender"><span>Cinsiyet</span></label>
+                        <select id="inputGender"v-model="gender" class="form-control">
+                            <option selected disabled>Seçiniz</option>
+                            <option>Kadın</option>
+                            <option>Erkek</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"><span>Mesaj</span></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Bize iletmek istediğiniz mesajı girebilirsiniz :)" v-model="message"></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" v-model="isConsentGiven" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            <span>Bilgilerimin kaydedilmesine izin veriyorum.</span>
+                        </label>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-light mr-3"onclick="validateForm2()"><label>Jacascript</label> </button>
+                <button type="button" class="btn btn-light mr-3" @click="validateForm"><label>Framework</label></button>
+                <button type="submit" class="btn btn-light mr-3"><label>Temizle</label></button>
+                <button type="submit" class="btn btn-light mr-3"><label>Gönder</label></button>
+            </form>
+        </div>
+
+
+
+
+
     </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-<script>
-    new Vue({
-        el: '#app',
-        data: {
-            formData: {
-                name: '',
-                email: '',
-                message: ''
-            },
-            submitted: false
-        },
-        methods: {
-            submitForm() {
-                // Formun gönderilmesi işlemleri burada yapılabilir, örneğin bir API'ye POST isteği gönderilebilir
-                // Burada sadece form verilerinin gönderildiği simüle edilmiştir
-                this.submitted = true;
-            },
-            clearForm() {
-                // Form verilerini temizle
-                this.formData.name = '';
-                this.formData.email = '';
-                this.formData.message = '';
-            }
-        }
-    });
-</script>
-
-</body>
-</html>
