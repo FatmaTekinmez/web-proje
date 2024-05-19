@@ -402,9 +402,58 @@ h1 {
     padding-top: 6%;
 }
 
+
 button label {
     color: rgb(224, 77, 131);
 }
+
+/*  sehrim css */
+.sehrimDivi {
+    position: relative;
+    border: 3px solid white;
+    margin-left: 5%;
+    margin-right: 4%;
+    margin-top: 4%;
+}
+.sehrimDivi,
+h1 {
+    padding-top: 3%;
+    padding-left: 4%;
+    font-family: serif;
+    color: white;
+}
+
+.sehrimDivi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(mor.jpg);
+    opacity: 0.5;
+    z-index: -1;
+}
+.sehrimYazi{
+    font-size: 150px;
+    margin-left: 2.5%;
+    text-align: left;
+    margin-top: 3%;
+    color: white;
+    font-weight: bold;
+    font-family: serif;
+}
+.sehrimYazi2{
+    color: rgb(255, 255, 255);
+    font-family: serif;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 4%;
+    font-size: 20px;
+}
+
+
 
 /* özgeçmiş css */
 header h1 {
