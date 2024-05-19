@@ -28,6 +28,44 @@
     font-weight: bold;
     font-family: serif;
 }
+.anasayfaYazi{
+    color: white;
+    font-family: serif;
+    padding-left: 6%;
+    padding-right: 2%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: 20px;
+}
+.anasayfaYazi2{
+    color: black;
+    font-family: serif;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: 20px;
+}
+
+.gezilecekBaslik {
+    font-size: 60px;
+    text-align: left;
+    margin-top: 3%;
+    margin-left: 4%;
+    color: white;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.gezilecekBaslikAlti {
+    color: black;
+    font-family: serif;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 4%;
+    font-size: 20px;
+}
 
 /* Tanıtım yazısını yazdığım div */
 .girisDivi {
@@ -50,6 +88,7 @@
     z-index: -1;
 
 }
+
 .morDiv2 {
     position: relative;
     border: 3px solid white;
@@ -254,9 +293,28 @@ h1 {
 }
 
 /* mirasımız css */
+.mirasimizGirişYazisi{
+    font-size: 80px;
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 3%;
+    color: white;
+    font-weight: bold;
+    font-family: serif;
+}
+.mirasimizYazilar{
+    color: rgb(255, 255, 255);
+    font-family: serif;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: 19.3px;
+}
 .resimDiv4 {
     margin-top: 15%;
 }
+
 .bilgiDivi {
     position: relative;
     border: 3px solid white;
@@ -277,7 +335,8 @@ h1 {
     z-index: -1;
 
 }
-#formDataContainer{
+
+#formDataContainer {
     padding-left: 10%;
     padding-top: 6%;
     padding-bottom: 5%;
@@ -303,6 +362,7 @@ h1 {
     opacity: 0.7;
     z-index: -1;
 }
+
 .formDiv {
     position: relative;
     border: 3px solid white;
@@ -322,16 +382,19 @@ h1 {
     opacity: 0.7;
     z-index: -1;
 }
-.form{
-    padding-left:7%;
-    padding-bottom:5% ;
+
+.form {
+    padding-left: 7%;
+    padding-bottom: 5%;
     padding-right: 7%;
     padding-top: 0.5%;
 }
-.form span{
+
+.form span {
     color: white;
 }
-.formDiv h1{
+
+.formDiv h1 {
     color: rgb(236, 157, 187);
     padding-left: 7%;
     padding-bottom: 1%;
@@ -339,9 +402,10 @@ h1 {
     padding-top: 6%;
 }
 
-button label{
-    color:rgb(224, 77, 131) ;
+button label {
+    color: rgb(224, 77, 131);
 }
+
 /* özgeçmiş css */
 header h1 {
     font-family: serif;
